@@ -86,9 +86,36 @@ function generateSalt() {
   return arrayBufferToHex(saltBytes.buffer);
 }
 
-const email = process.argv[2] || '12zeeshanahmed2004@gmail.com';
-const password = process.argv[3] || 'Password123!';
-const username = process.argv[4] || 'zeeshan';
+// ==============================================
+// Read credentials from command line arguments
+// ==============================================
+
+const email = process.argv[2];
+const password = process.argv[3];
+const username = process.argv[4];
+
+if (!email || !password || !username) {
+  console.log(`
+====================================================
+ CipherTalk - Admin User Creator
+====================================================
+
+Usage:
+node create-user-admin.js <email> <password> <username>
+
+Example:
+node create-user-admin.js admin@example.com MyStrongPassword@123 admin
+
+====================================================
+`);
+
+  process.exit(1);
+}
+
+if (password.length < 12) {
+  console.error("❌ Password must be at least 12 characters long.");
+  process.exit(1);
+}
 
 async function main() {
   try {
