@@ -103,9 +103,6 @@ if (!email || !password || !username) {
 Usage:
 node create-user-admin.js <email> <password> <username>
 
-Example:
-node create-user-admin.js admin@example.com MyStrongPassword@123 admin
-
 ====================================================
 `);
 
@@ -164,12 +161,11 @@ async function main() {
     console.log("\n=============================================");
     console.log("🎉 SUCCESS! USER CREATED AND KEYS INITIALIZED!");
     console.log("=============================================");
-    console.log(`Email:    ${email}`);
-    console.log(`Password: ${password}`);
+    console.log(`Email: ${email}`);
     console.log(`Username: ${username}`);
     console.log("=============================================");
-    console.log("You can now go to the frontend, click LOG IN,");
-    console.log("and enter these credentials!");
+    console.log("Admin account created successfully.");
+
   } catch (err) {
     console.error("Admin user creation failed:", err.message);
   }
