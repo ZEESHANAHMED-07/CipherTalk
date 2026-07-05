@@ -1,21 +1,105 @@
-# Security Policy
+# 🔐 CipherTalk Security Policy
 
-## Supported Versions
+Thank you for helping improve the security of CipherTalk.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+CipherTalk is a Zero-Knowledge End-to-End Encrypted Chat application. Security and privacy are core design goals, and we appreciate responsible disclosure of potential vulnerabilities.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+---
 
-## Reporting a Vulnerability
+# Supported Versions
 
-Use this section to tell people how to report a vulnerability.
+Only the latest version of CipherTalk receives security updates.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+| Version | Supported |
+|---------|-----------|
+| Latest | ✅ Yes |
+| Older Releases | ❌ No |
+
+---
+
+# Reporting a Vulnerability
+
+If you discover a security vulnerability, please **do not create a public GitHub issue**.
+
+Instead, report it responsibly by contacting:
+
+**Email:** your-email@example.com
+
+Include the following information if possible:
+
+- Description of the vulnerability
+- Steps to reproduce
+- Impact assessment
+- Proof of Concept (if applicable)
+- Suggested mitigation (optional)
+
+---
+
+# Response Timeline
+
+We aim to:
+
+- Acknowledge reports within **48 hours**
+- Provide an initial assessment within **7 days**
+- Release a fix as soon as reasonably possible depending on severity
+
+---
+
+# Scope
+
+Examples of vulnerabilities that are in scope include:
+
+- Authentication bypass
+- Authorization flaws
+- End-to-End Encryption weaknesses
+- Key exchange vulnerabilities
+- JWT vulnerabilities
+- Injection attacks
+- Cross-Site Scripting (XSS)
+- Cross-Site Request Forgery (CSRF)
+- Server-side request forgery
+- Remote Code Execution
+- Privilege escalation
+- Information disclosure
+- Rate limiting bypass
+
+---
+
+# Out of Scope
+
+The following are generally considered out of scope:
+
+- Missing security headers that do not create a practical vulnerability
+- Development-only dependency vulnerabilities
+- Social engineering
+- Denial-of-Service attacks
+- Vulnerabilities in third-party services outside this project
+
+---
+
+# Security Features
+
+CipherTalk implements multiple security controls including:
+
+- Zero-Knowledge Architecture
+- End-to-End Encryption
+- X25519 (Curve25519) Key Exchange
+- AES-256-GCM Message Encryption
+- PBKDF2 Key Derivation
+- JWT Authentication
+- Supabase Row-Level Security (RLS)
+- Helmet Security Headers
+- Rate Limiting
+- Audit Logging
+
+---
+
+# Responsible Disclosure
+
+Please allow adequate time for a fix before publicly disclosing any vulnerability.
+
+We appreciate responsible security research and will acknowledge valid reports where appropriate.
+
+---
+
+Thank you for helping keep CipherTalk secure.
